@@ -6,32 +6,27 @@
 // *************************************
 
 // -------------------------------------
-//   @font-face
-// -------------------------------------
-
-// ----- Open Sans ----- //
-
-// +font-face('OpenSans', 'OpenSans')
-// +font-face('OpenSans', 'OpenSansBold', bold)
-// +font-face('OpenSans', 'OpenSansItalic', normal, italic)
-
-// -------------------------------------
 //   Colors
 // -------------------------------------
 
 // ----- Palette ----- //
 
-$accent: #2e89d4
+$c-black: #000
+$c-blue: #30323e
+$c-gray-1: #f2f2f0
+$c-gray-2: #e3e3e1
+$c-gray-3: #b2b2b1
+$c-gray-4: #807f7a
+$c-red: #c2343e
+$c-teal: #79c2b0
+$c-white: #ffffff
+$c-yellow: #d1b633
 
 // ----- Base ----- //
 
-$c-background-invert: #444
-$c-background: #fff
-$c-border: $accent
-$c-highlight: $accent
-$c-subdue: lighten($accent, 25%)
-$c-text-invert: #fff
-$c-text: #444
+$c-background: $c-gray-1
+$c-border: $c-gray-2
+$c-text: $c-gray-3
 
 // -------------------------------------
 //   Base
@@ -49,23 +44,13 @@ $b-boxShadow: 0 1px 4px rgba($c-text, 0.25)
 
 $b-fontFamily-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif
 $b-fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif
-$b-fontSize: 16px
-$b-fontSize-xs: 60%
-$b-fontSize-s: 75%
-$b-fontSize-m: 90%
-$b-fontSize-l: 115%
-$b-fontSize-xl: 150%
+$b-fontSize: 14px
 $b-lineHeight: 1.6
 
 // ----- Sizing ----- //
 
-$b-maxWidth: em(1024px)
-$b-maxWidth-s: em(700px)
-$b-space: em(20px)
-$b-space-xs: $b-space * 0.25
-$b-space-s: $b-space * 0.5
-$b-space-l: $b-space * 2
-$b-space-xl: $b-space * 4
+$b-maxWidth: 1200px
+$b-space: 20px
 
 // -------------------------------------
 //   Components

@@ -20,12 +20,10 @@ body
 // -------------------------------------
 
 ul, p
-  margin-bottom: $b-space
-  margin-top: 0
+  margin: 0
 
 li
-  margin-bottom: $b-space-s
-  margin-top: 0
+  margin: 0
 
 // ----- Headings ----- //
 
@@ -33,10 +31,10 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4
+  color: $c-gray-4
   font-family: $b-fontFamily-heading
   font-weight: bold
   line-height: 1.2
-  margin-bottom: $b-space-xs
   margin-top: 0
 
 h1, .h1
@@ -59,11 +57,11 @@ h4, .h4
 
 a
   border-bottom: $b-border
-  color: $c-highlight
+  color: $c-red
   text-decoration: none
   &:hover,
   &:focus
-    color: lighten($c-highlight, 5%)
+    color: lighten($c-red, 5%)
 
 // ----- Images ----- //
 
