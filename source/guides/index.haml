@@ -1,0 +1,3 @@
+= wrap_layout :layout do
+  - sitemap.resources.select{|g| g.data.type == "guide"}.each do |guide|
+    %h1= guide.data.title
