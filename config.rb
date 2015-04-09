@@ -23,12 +23,12 @@ activate :automatic_image_sizes
 
 # ----- Blog ----- #
 
-# activate :blog do |blog|
-#   blog.layout = "layout_article"
-#   blog.permalink = "{title}"
-#   blog.prefix = "blog"
-#   blog.sources = "articles/{title}.html"
-# end
+activate :blog do |blog|
+  blog.layout = "layout_blog"
+  blog.permalink = "{title}"
+  blog.prefix = "blog"
+  blog.sources = "articles/{title}.html"
+end
 
 # ----- Directories for assets (needs to be activated after blog) ----- #
 
