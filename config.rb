@@ -53,3 +53,9 @@ configure :build do
   activate :relative_assets
   activate :gzip
 end
+
+# ----- Deploy ----- #
+
+activate :deploy do |deploy|
+  deploy.method = :git
+end
