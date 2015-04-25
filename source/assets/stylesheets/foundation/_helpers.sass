@@ -6,8 +6,22 @@
 // *************************************
 
 // -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- Em ----- //
+
+@function em($target, $context: $b-fontSize)
+  @if ($target == 0)
+    @return 0
+  @else
+    @return ($target / $context) * 1em
+
+// -------------------------------------
 //   Mixins
 // -------------------------------------
+
+// ----- Respond To ----- //
 
 =respond-to($val, $query: min-width, $media: screen)
   @media #{$media} and ($query: $val)
