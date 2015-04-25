@@ -1,5 +1,19 @@
 .row
   .cell.well
-    %h1 Middleman is Watching
-    %p= lorem.paragraph
-    %p= link_to 'Read Online Documentation', 'http://middlemanapp.com/'
+    .g
+      .g-b.g-b--m--1of2
+        .card
+          .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
+          .card-content
+            %h4 Stories
+            %p Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            %hr.rule
+            = link_to "See the Stories", "stories/index.html"
+      .g-b.g-b--m--1of2
+        .card
+          .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
+          .card-content
+            %h4 Guides
+            %p Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            %hr.rule
+            = link_to "Read the Guides", "guides/index.html"

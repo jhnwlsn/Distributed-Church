@@ -5,6 +5,9 @@
 //
 // *************************************
 
+*
+  box-sizing: border-box
+
 html
   -webkit-font-smoothing: antialiased
   background: $c-background
@@ -23,10 +26,10 @@ body
 // -------------------------------------
 
 ul, p
-  margin: 0
+  margin: 0 0 1rem
 
 li
-  margin: 0
+  margin: 0 0 1rem
 
 // ----- Headings ----- //
 
@@ -40,7 +43,7 @@ h4, .h4
   font-weight: 800
   letter-spacing: 0.125rem
   line-height: 1.2
-  margin: 0
+  margin: 0 0 1rem
   text-transform: uppercase
 
 h1, .h1
@@ -63,6 +66,8 @@ h4, .h4
 
 a
   color: $c-red
+  font-style: italic
+  font-weight: 700
   text-decoration: none
   &:hover,
   &:focus
