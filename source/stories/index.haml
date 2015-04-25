@@ -1,4 +1,4 @@
-.row
+.row.row--a
   .cell
     = partial "shared/navigation"
   .cell.well
@@ -6,8 +6,16 @@
       .g-b.g-b--m--1of2
         %h1 Stories
       .g-b.g-b--m--1of2
-        %p= lorem.sentences 4
+        %p.mts= lorem.sentences 4
 
+.hero.hero--stories
+  .cell
+    .hero-content
+      Featured Story
+  %canvas#hero-mountains
+
+.row
+  .cell.well
     = wrap_layout :layout do
       - sitemap.resources.select{|g| g.data.type == "story"}.each do |guide|
         %h3= link_to guide.data.title, guide.url
