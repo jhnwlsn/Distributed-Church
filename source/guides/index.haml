@@ -1,3 +1,7 @@
-= wrap_layout :layout do
-  - sitemap.resources.select{|g| g.data.type == "guide"}.each do |guide|
-    %h2= guide.data.title
+.row
+  .cell
+    = partial "shared/navigation"
+  .cell.well
+    = wrap_layout :layout do
+      - sitemap.resources.select{|g| g.data.type == "guide"}.each do |guide|
+        %h2= guide.data.title

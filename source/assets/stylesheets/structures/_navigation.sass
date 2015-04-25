@@ -1,0 +1,57 @@
+// *************************************
+//
+//   Navigation
+//   -> Logo and global links
+//
+// *************************************
+
+.navigation
+  height: 8rem
+  position: relative
+  z-index: 10
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.navigation
+  .index &
+    .navigation-logo
+      background-image: url(image_path("logo-white.svg"))
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.navigation-links
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+
+.navigation-logo
+  background: transparent url(image_path("logo-gray.svg")) no-repeat
+  background-position: center center
+  background-size: 100%
+  display: block
+  height: 2.75rem
+  left: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 20rem
+  &:hover,
+  &:focus
+    opacity: 0.8
