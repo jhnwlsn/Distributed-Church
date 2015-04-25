@@ -9,13 +9,16 @@
         %p.mts= lorem.sentences 4
 
 .hero.hero--stories
+  %canvas#hero-drapes
   .cell
     .hero-content
-      Featured Story
+      - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |guide, index|
+        - if index == 1
+          %h4 Featured Story
+          %h3= link_to guide.data.title, guide.url
   %canvas#hero-mountains
 
 .row
   .cell.well
-    = wrap_layout :layout do
-      - sitemap.resources.select{|g| g.data.type == "story"}.each do |guide|
-        %h3= link_to guide.data.title, guide.url
+    - sitemap.resources.select{|g| g.data.type == "story"}.each do |guide|
+      %h3= link_to guide.data.title, guide.url
