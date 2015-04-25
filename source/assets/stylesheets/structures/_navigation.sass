@@ -6,7 +6,7 @@
 // *************************************
 
 .navigation
-  height: 8rem
+  height: 10rem
   position: relative
   z-index: 10
 
@@ -16,6 +16,9 @@
 
 .navigation
   .index &
+    .navigation-links
+      a
+        color: $c-gray-1
     .navigation-logo
       background-image: url(image_path("logo-white.svg"))
 
@@ -40,6 +43,18 @@
   right: 0
   top: 50%
   transform: translateY(-50%)
+  a:not(.btn)
+    color: $c-gray-4
+    font-family: $b-fontFamily-heading
+    font-style: normal
+    letter-spacing: 0.125rem
+    margin: 0 $b-space
+    text-transform: uppercase
+    &:hover,
+    &:focus
+      color: $c-red
+  a.btn
+    margin-left: $b-space
 
 .navigation-logo
   background: transparent url(image_path("logo-gray.svg")) no-repeat
