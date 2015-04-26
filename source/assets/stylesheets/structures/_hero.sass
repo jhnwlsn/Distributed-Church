@@ -7,8 +7,12 @@
 
 .hero
   background: $c-black
-  padding: 0 $b-space
+  padding: 0 ($g-gutter * 0.5)
   position: relative
+  +respond-to($g-s)
+    padding: 0 ($g-gutter * 2)
+  +respond-to($g-m)
+    padding: 0 $g-gutter
   &::after
     background-image: url(image_path("placeholder.jpg"))
     background-position: center

@@ -7,7 +7,11 @@
 
 .row
   overflow: hidden
-  padding: 0 $b-space
+  padding: 0 ($g-gutter * 0.5)
+  +respond-to($g-s)
+    padding: 0 ($g-gutter * 2)
+  +respond-to($g-m)
+    padding: 0 $g-gutter
 
 // -------------------------------------
 //   Modifiers
