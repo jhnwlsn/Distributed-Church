@@ -7,27 +7,51 @@
 
 .card
   background: $c-white
-  height: 25rem
-  margin-bottom: $b-space
+  margin-bottom: ($b-space * 2)
   position: relative
+  +respond-to($g-s)
+    height: 25rem
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.card.card--full
+  .card-content
+    +respond-to($g-m)
+      left: 60%
+  .card-image
+    +respond-to($g-m)
+      width: 50%
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
 .card-content
-  left: 15rem
-  position: absolute
-  right: 7rem
-  top: 50%
-  transform: translateY(-50%)
+  padding: 2rem 2.5rem
+  +respond-to($g-s)
+    left: 35%
+    padding: 0
+    position: absolute
+    right: 10%
+    top: 50%
+    transform: translateY(-50%)
+  +respond-to($g-m)
+    left: 32%
 
 .card-image
   background: $c-gray-2
   background-position: center
   background-size: cover
-  bottom: 0
-  left: 0
-  position: absolute
-  top: 0
-  width: 9rem
+  height: 10rem
+  width: 100%
+  +respond-to($g-s)
+    bottom: 0
+    height: auto
+    left: 0
+    position: absolute
+    top: 0
+    width: 25%
+  +respond-to($g-m)
+    width: 20%
