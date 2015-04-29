@@ -12,21 +12,22 @@
   %canvas#hero-drapes
   .cell
     .hero-content
-      - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |guide, index|
+      - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |story, index|
         - if index == 0
           %h4 Featured Story
-          %h3= link_to guide.data.title, guide.url
-          %p= guide.data.description
+          %h3= link_to story.data.title, story.url
+          %p= story.data.description
   %canvas#hero-mountains
 
 .row
   .cell.well
-    - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |guide, index|
+    - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |story, index|
       - if index > 0
-        .card.card--full
-          .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
+        .card.card--full.card--stories
+          = link_to story.url do
+            .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
           .card-content
-            %h4= link_to guide.data.title, guide.url
+            %h4= link_to story.data.title, story.url
             %p Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             %hr.rule
-            = link_to "Read this Story", guide.url
+            = link_to "Read this Story", story.url
