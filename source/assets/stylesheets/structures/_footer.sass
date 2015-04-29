@@ -1,0 +1,62 @@
+// *************************************
+//
+//   Footer
+//   -> Very bottom o' the site
+//
+// *************************************
+
+.footer
+  background: $c-black
+  overflow: hidden
+  padding: 0 ($g-gutter * 0.5)
+  +respond-to($g-s)
+    padding: 0 ($g-gutter * 2)
+  +respond-to($g-m)
+    padding: 0 $g-gutter
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.footer-contact
+  float: right
+  margin-bottom: $b-space * 3
+
+.footer-copyright
+  float: left
+  margin-bottom: $b-space * 3
+
+.footer-links
+  float: right
+  margin-bottom: $b-space * 2
+
+.footer-logo
+  background: transparent url(image_path("logo-white.svg")) no-repeat
+  background-position: center center
+  background-size: 100%
+  display: block
+  float: left
+  height: 2.75rem
+  margin-bottom: $b-space * 2
+  width: 20rem
+  &:hover,
+  &:focus
+    opacity: 0.8
