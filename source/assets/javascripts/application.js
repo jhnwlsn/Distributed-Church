@@ -8,12 +8,16 @@ var context = canvas.getContext('2d');
 canvas.height = 300;
 canvas.width = 2880;
 
+function small(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
 context.beginPath();
-context.moveTo(0, Math.floor(Math.random() * 110) + 190);
-context.lineTo(720, Math.floor(Math.random() * 110) + 190);
-context.lineTo(1440, Math.floor(Math.random() * 110) + 190);
-context.lineTo(2160, Math.floor(Math.random() * 110) + 190);
-context.lineTo(2880, Math.floor(Math.random() * 110) + 190);
+context.moveTo(0, small(100, 200));
+context.lineTo(720, small(100, 200));
+context.lineTo(1440, small(100, 200));
+context.lineTo(2160, small(100, 200));
+context.lineTo(2880, small(100, 200));
 context.lineTo(2880, 400);
 context.lineTo(0, 400);
 context.closePath();
