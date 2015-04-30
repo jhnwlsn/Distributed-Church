@@ -1,7 +1,35 @@
-.row
+.row.row--a
   .cell
     = partial "shared/navigation"
   .cell.well
-    = wrap_layout :layout do
-      - sitemap.resources.select{|g| g.data.type == "guide"}.each do |guide|
-        %h2= guide.data.title
+    .g
+      .g-b.g-b--m--1of2
+        %h1 Guides
+      .g-b.g-b--m--1of2
+        %p.mbm.mts= lorem.sentences 4
+
+.hero.hero--guides
+  %canvas#hero-drapes
+  .cell
+    .hero-content
+      - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|
+        - if index == 0
+          %h4 Featured Guide
+          %h3= link_to guide.data.title, guide.url
+          %p= guide.data.description
+          %hr.rule
+          = link_to "Read this Guide", guide.url
+  %canvas#hero-mountains
+
+.row
+  .cell.well
+    - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|
+      - if index > 0
+        .card.card--full.card--stories
+          = link_to guide.url do
+            .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
+          .card-content
+            %h4= link_to guide.data.title, guide.url
+            %p Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            %hr.rule
+            = link_to "Read this Guide", guide.url
