@@ -2,96 +2,48 @@
 //   Mountains
 // -------------------------------------
 
-var canvas = document.getElementById("hero-mountains");
-var context = canvas.getContext('2d');
+function mountains() {
 
-canvas.height = 300;
-canvas.width = 2880;
+  var s = Snap(".mountains");
 
-function small(range, space) {
-  return Math.floor(Math.random() * range) + space;
+  s.polyline(
+    0, number(110, 200),
+    360, number(110, 200),
+    720, number(110, 200),
+    1080, number(110, 200),
+    1440, number(110, 200),
+    1440, 200,
+    0, 200
+  ).attr({class: "mountains-opaque"});
+
+  s.polyline(
+    0, number(70, 160),
+    360, number(70, 160),
+    720, number(70, 160),
+    1080, number(70, 160),
+    1440, number(70, 160),
+    1440, 200,
+    0, 200
+  ).attr({class: "mountains-transparent"});
+
+  s.polyline(
+    0, number(30, 120),
+    360, number(30, 120),
+    720, number(30, 120),
+    1080, number(30, 120),
+    1440, number(30, 120),
+    1440, 200,
+    0, 200
+  ).attr({class: "mountains-clear"});
+
 };
 
-console.log(Math.floor(Math.random() * 110));
-
-context.beginPath();
-context.moveTo(0, small(110, 190));
-context.lineTo(720, small(110, 190));
-context.lineTo(1440, small(110, 190));
-context.lineTo(2160, small(110, 190));
-context.lineTo(2880, small(110, 190));
-context.lineTo(2880, 400);
-context.lineTo(0, 400);
-context.closePath();
-context.fillStyle = 'rgba(240, 241, 242, 1)';
-context.fill();
-
-context.beginPath();
-context.moveTo(0, Math.floor(Math.random() * 200) + 50);
-context.lineTo(720, Math.floor(Math.random() * 200) + 50);
-context.lineTo(1440, Math.floor(Math.random() * 200) + 50);
-context.lineTo(2160, Math.floor(Math.random() * 200) + 50);
-context.lineTo(2880, Math.floor(Math.random() * 200) + 50);
-context.lineTo(2880, 400);
-context.lineTo(0, 400);
-context.closePath();
-context.fillStyle = 'rgba(240, 241, 242, 0.75)';
-context.fill();
-
-context.beginPath();
-context.moveTo(0, Math.floor(Math.random() * 200));
-context.lineTo(720, Math.floor(Math.random() * 200));
-context.lineTo(1440, Math.floor(Math.random() * 200));
-context.lineTo(2160, Math.floor(Math.random() * 200));
-context.lineTo(2880, Math.floor(Math.random() * 200));
-context.lineTo(2880, 400);
-context.lineTo(0, 400);
-context.closePath();
-context.fillStyle = 'rgba(240, 241, 242, 0.5)';
-context.fill();
+mountains();
 
 // -------------------------------------
-//   Drapes
+//   Random Number Generator
 // -------------------------------------
 
-var cnvs = document.getElementById("hero-drapes");
-var ctx = cnvs.getContext('2d');
-
-cnvs.height = 300;
-cnvs.width = 2880;
-
-ctx.beginPath();
-ctx.moveTo(0, Math.floor(Math.random() * 110) + 190);
-ctx.lineTo(720, Math.floor(Math.random() * 110) + 190);
-ctx.lineTo(1440, Math.floor(Math.random() * 110) + 190);
-ctx.lineTo(2160, Math.floor(Math.random() * 110) + 190);
-ctx.lineTo(2880, Math.floor(Math.random() * 110) + 190);
-ctx.lineTo(2880, 400);
-ctx.lineTo(0, 400);
-ctx.closePath();
-ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-ctx.fill();
-
-ctx.beginPath();
-ctx.moveTo(0, Math.floor(Math.random() * 200) + 50);
-ctx.lineTo(720, Math.floor(Math.random() * 200) + 50);
-ctx.lineTo(1440, Math.floor(Math.random() * 200) + 50);
-ctx.lineTo(2160, Math.floor(Math.random() * 200) + 50);
-ctx.lineTo(2880, Math.floor(Math.random() * 200) + 50);
-ctx.lineTo(2880, 400);
-ctx.lineTo(0, 400);
-ctx.closePath();
-ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
-ctx.fill();
-
-ctx.beginPath();
-ctx.moveTo(0, Math.floor(Math.random() * 200));
-ctx.lineTo(720, Math.floor(Math.random() * 200));
-ctx.lineTo(1440, Math.floor(Math.random() * 200));
-ctx.lineTo(2160, Math.floor(Math.random() * 200));
-ctx.lineTo(2880, Math.floor(Math.random() * 200));
-ctx.lineTo(2880, 400);
-ctx.lineTo(0, 400);
-ctx.closePath();
-ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-ctx.fill();
+function number(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};

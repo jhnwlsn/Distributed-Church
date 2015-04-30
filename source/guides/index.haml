@@ -6,10 +6,10 @@
       .g-b.g-b--m--1of2
         %h1 Guides
       .g-b.g-b--m--1of2
-        %p.mbm.mts= lorem.sentences 4
+        %p.mbl.mts= lorem.sentences 4
 
 .hero.hero--guides
-  %canvas#hero-drapes
+  -# %canvas#hero-drapes
   .cell
     .hero-content
       - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|
@@ -19,7 +19,7 @@
           %p= guide.data.description
           %hr.rule
           = link_to "Read this Guide", guide.url
-  %canvas#hero-mountains
+  %svg.mountains
 
 .row
   .cell.well

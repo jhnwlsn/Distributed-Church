@@ -6,10 +6,10 @@
       .g-b.g-b--m--1of2
         %h1 Stories
       .g-b.g-b--m--1of2
-        %p.mbm.mts= lorem.sentences 4
+        %p.mbl.mts= lorem.sentences 4
 
 .hero.hero--stories
-  %canvas#hero-drapes
+  -# %canvas#hero-drapes
   .cell
     .hero-content
       - sitemap.resources.select{|g| g.data.type == "story"}.each_with_index do |story, index|
@@ -17,7 +17,7 @@
           %h4 Featured Story
           %h3= link_to story.data.title, story.url
           %p= story.data.description
-  %canvas#hero-mountains
+  %svg.mountains
 
 .row
   .cell.well
