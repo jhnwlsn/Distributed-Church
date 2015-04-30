@@ -5,6 +5,7 @@
 function mountains() {
 
   var s = Snap(".mountains");
+  s.attr({ height: "100%", width: "100%", viewBox: "0 0 1440 200" });
 
   s.polyline(
     0, number(110, 200),
