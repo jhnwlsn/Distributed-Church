@@ -1,0 +1,41 @@
+// *************************************
+//
+//   Bucket
+//   -> Based on:
+//      * http://jsfiddle.net/necolas/rZvEF/
+//
+// *************************************
+
+.bucket
+  @extend .group
+  display: table
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 2
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Content ----- //
+
+.bucket-content
+  color: $c-white
+  display: table-cell
+  vertical-align: middle
+  width: 10000px
+  a
+    color: $c-white !important
+
+// ----- Media ----- //
+
+.bucket-media
+  float: left
+  margin-right: $g-gutter
+  img
+    display: block
+    max-width: 300px
