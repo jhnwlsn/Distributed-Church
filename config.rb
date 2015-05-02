@@ -34,6 +34,22 @@ end
 
 activate :directory_indexes
 
+# ----- Markdown ----- #
+
+set :markdown_engine, :redcarpet
+set :markdown, with_toc_data: true
+
+# Table of Contents Helper
+
+helpers do
+  def table_of_contents(resource)
+    content = File.read(resource.source_file)
+    toc_renderer = Redcarpet::Render::HTML_TOC.new
+    markdown = Redcarpet::Markdown.new(toc_renderer, nesting_level: 2)
+    markdown.render(content)
+  end
+end
+
 # --------------------------------------
 #   Production
 # --------------------------------------
