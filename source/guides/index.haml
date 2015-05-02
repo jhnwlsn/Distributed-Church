@@ -29,7 +29,7 @@
   .cell.well
     - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|
       - if index > 0
-        .card.card--full.card--stories
+        .card.card--full.card--guides
           = link_to guide.url do
             .card-image{style: "background-image: url(#{image_path 'placeholder.jpg'})"}
           .card-content
