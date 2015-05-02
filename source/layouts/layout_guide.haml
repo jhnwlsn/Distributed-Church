@@ -13,7 +13,7 @@
             &bull; Current Guide
           %h2= current_page.data.title
           %p= current_page.data.description
-          %ul= table_of_contents(current_page)
+          = table_of_contents(current_page)
       %hr.rule
     .cell.well--l
       = yield
