@@ -42,8 +42,11 @@
 
 .hero--home
   .cell
-    height: 100vh
-    min-height: 50rem
+    height: 75vh
+    min-height: 40rem
+    +respond-to($g-s)
+      height: 100vh
+      min-height: 50rem
 
 .hero--stories
   a
