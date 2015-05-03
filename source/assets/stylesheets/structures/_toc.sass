@@ -1,0 +1,53 @@
+// *************************************
+//
+//   TOC
+//   -> Table of Contents for Guides
+//
+// *************************************
+
+.toc
+  margin-top: $b-space * 1.5
+  +respond-to($g-s)
+    column-count: 2
+    column-gutter: $g-gutter
+  +respond-to($g-m)
+    font-size: 150%
+  ul
+    counter-reset: item
+    list-style: none
+    padding-left: 0
+    li
+      a
+        color: $c-yellow
+        font-style: normal
+        &:hover,
+        &:focus
+          color: darken($c-yellow, 10%)
+      &::before
+        content: counter(item) ". "
+        counter-increment: item
+        display: inline-block
+        font-weight: 800
+        width: 2.5rem
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------

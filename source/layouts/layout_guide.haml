@@ -6,14 +6,16 @@
         .g-b.g-b--s--1of3.g-b--m--2of5
           = image_tag("#{current_page.data.image}")
         .g-b.g-b--s--2of3.g-b--m--3of5.ptm
-          %p
+          %p.breadcrumbs
             = link_to "Home", "/"
             &bull;
             = link_to "Guides", "/guides/"
             &bull; Current Guide
           %h2= current_page.data.title
-          %p= current_page.data.description
-          = table_of_contents(current_page)
-      %hr.rule
+          %p.fsl= current_page.data.description
+          .toc
+            = table_of_contents(current_page)
+  .row
     .cell.well--l
-      = yield
+      .guide
+        = yield
