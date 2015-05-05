@@ -8,22 +8,28 @@ function draw(orientation, color) {
   context.beginPath();
   for (var i = 0; i < 3; i++) {
     if (i == 0) {
-      context.fillStyle = 'rgba('+ color["r"] +', '+ color["g"] +', '+ color["b"] +', 1)';
+      context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',1)';
+      mountainsPoints("small");
     } else if (i == 1) {
-      context.fillStyle = 'rgba('+ color["r"] +', '+ color["g"] +', '+ color["b"] +', 0.75)';
+      context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',0.75)';
+      mountainsPoints("medium");
     } else {
-      context.fillStyle = 'rgba('+ color["r"] +', '+ color["g"] +', '+ color["b"] +', 0.5)';
+      context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',0.5)';
+      mountainsPoints("large");
     }
-    points(orientation);
   }
 };
 
-function points(orientation) {
+// ---- Create Points ----- //
+
+// Mountains
+
+function mountainsPoints(size) {
   for (var i = 0; i <= canvas.width; i+=(canvas.width / 4)) {
     if (i === 0) {
-      context.moveTo(i, randomNumber(150, 300));
+      context.moveTo(i, size == "small" ? randomNumber(150, 300) : size == "medium" ? randomNumber(100, 250) : randomNumber(50, 200));
     } else {
-      context.lineTo(i, randomNumber(150, 300));
+      context.lineTo(i, size == "small" ? randomNumber(150, 300) : size == "medium" ? randomNumber(100, 250) : randomNumber(50, 200));
     }
   }
   context.lineTo(canvas.width, canvas.height);
