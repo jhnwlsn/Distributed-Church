@@ -6,17 +6,23 @@
 // *************************************
 
 .guide
+  font-size: ($b-fontSize-guide * 0.65)
   padding-bottom: ($b-space * 3)
-  padding-top: ($b-space * 3)
+  padding-top: ($b-space * 2)
   max-width: $b-maxWidth
   position: relative
+  +respond-to($g-s)
+    font-size: $b-fontSize-guide
+    padding-top: ($b-space * 3.5)
+  +respond-to($g-m)
+    padding-top: ($b-space * 5)
   h1, h2, h3, h4, h5, h6
     margin: 0
     padding: $b-space 0
   h1
-    font-size: 225%
+    font-size: 170%
   h2
-    font-size: 175%
+    font-size: 150%
   h3
     font-size: 125%
   h4, h5, h6
