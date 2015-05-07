@@ -27,6 +27,14 @@
     font-size: 125%
   h4, h5, h6
     font-size: 100%
+  p
+    +respond-to($g-m)
+      width: calc(65% - 50px)
+
+  .card
+    +respond-to($g-m)
+      float: right
+      width: 35%
 
 // -------------------------------------
 //   Modifiers
