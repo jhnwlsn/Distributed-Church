@@ -14,6 +14,8 @@ function draw(orientation, color) {
         mountainsPoints("small");
       } else if (orientation == "drapes") {
         drapesPoints("small");
+      } else if (orientation == "vertical") {
+        verticalPoints("small");
       }
 
     } else if (i == 1) {
@@ -23,6 +25,8 @@ function draw(orientation, color) {
         mountainsPoints("medium");
       } else if (orientation == "drapes") {
         drapesPoints("medium");
+      } else if (orientation == "vertical") {
+        verticalPoints("small");
       }
 
     } else {
@@ -32,6 +36,8 @@ function draw(orientation, color) {
         mountainsPoints("large");
       } else if (orientation == "drapes") {
         drapesPoints("large");
+      } else if (orientation == "vertical") {
+        verticalPoints("small");
       }
 
     }
@@ -51,7 +57,7 @@ function drapesPoints(size) {
   context.lineTo(canvas.width, canvas.height);
   context.closePath();
   context.fill();
-}
+};
 
 // Mountains
 
@@ -64,6 +70,18 @@ function mountainsPoints(size) {
     }
   }
   context.lineTo(canvas.width, canvas.height);
+  context.lineTo(0, canvas.height);
+  context.closePath();
+  context.fill();
+};
+
+// Vertical
+
+function verticalPoints(size) {
+  context.moveTo(0, 0);
+  for (var i = 0; i <= canvas.height; i+=(canvas.height / 3)) {
+    context.lineTo(size == "small" ? randomNumber(0, 85) : size == "medium" ? randomNumber(50, 100) : randomNumber(100, 125), i);
+  }
   context.lineTo(0, canvas.height);
   context.closePath();
   context.fill();
@@ -106,4 +124,15 @@ for (var i = 0; i < drapes.length; i++) {
   canvas.width = 2880;
 
   draw("drapes", white);
+}
+
+var verticals = document.getElementsByClassName("polygons--vertical");
+for (var i = 0; i < verticals.length; i++) {
+  var canvas = verticals[i];
+  var context = canvas.getContext('2d');
+
+  canvas.height = 760;
+  canvas.width = 125;
+
+  draw("vertical", teal);
 }
