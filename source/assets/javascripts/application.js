@@ -9,25 +9,31 @@ function draw(orientation, color) {
   for (var i = 0; i < 3; i++) {
     if (i == 0) {
       context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',1)';
+
       if (orientation == "mountains") {
         mountainsPoints("small");
       } else if (orientation == "drapes") {
         drapesPoints("small");
       }
+
     } else if (i == 1) {
       context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',0.75)';
+
       if (orientation == "mountains") {
         mountainsPoints("medium");
       } else if (orientation == "drapes") {
         drapesPoints("medium");
       }
+
     } else {
       context.fillStyle = 'rgba('+ color["r"] +','+ color["g"] +','+ color["b"] +',0.5)';
+
       if (orientation == "mountains") {
         mountainsPoints("large");
       } else if (orientation == "drapes") {
         drapesPoints("large");
       }
+
     }
   }
 };
@@ -63,6 +69,7 @@ function mountainsPoints(size) {
   context.fill();
 };
 
+
 // ----- Random number generator ------ //
 
 function randomNumber(min, max) {
@@ -90,9 +97,9 @@ for (var i = 0; i < mountains.length; i++) {
   draw("mountains", gray);
 }
 
-var mountains = document.getElementsByClassName("polygons--drapes");
-for (var i = 0; i < mountains.length; i++) {
-  var canvas = mountains[i];
+var drapes = document.getElementsByClassName("polygons--drapes");
+for (var i = 0; i < drapes.length; i++) {
+  var canvas = drapes[i];
   var context = canvas.getContext('2d');
 
   canvas.height = 300;
