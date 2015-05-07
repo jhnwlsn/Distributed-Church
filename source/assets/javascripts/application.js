@@ -50,6 +50,8 @@ function randomNumber(min, max) {
 
 var gray = {r: 240, g: 241, b: 242};
 var red = {r: 229, g: 65, b: 59};
+var teal = {r: 118, g: 195, b: 176};
+var yellow = {r: 210, g: 183, b: 31};
 
 var mountains = document.getElementsByClassName("polygons");
 for (var i = 0; i < mountains.length; i++) {
