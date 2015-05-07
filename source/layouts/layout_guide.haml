@@ -11,7 +11,7 @@
             &bull;
             = link_to "Guides", "/guides/"
             &bull; Current Guide
-          %h2= current_page.data.title
+          %h2.mbm= current_page.data.title
           %p.fsl= current_page.data.description
           .toc
             = table_of_contents(current_page)
