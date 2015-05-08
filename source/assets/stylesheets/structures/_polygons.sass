@@ -25,11 +25,17 @@
   right: 0
   width: 100%
 
-.polygons--vertical
+.polygons--guides,
+.polygons--stories
   bottom: 0
+  display: none
   height: 100%
-  left: 20%
+  left: 25%
   top: 0
+  +respond-to($g-s)
+    display: block
+  +respond-to($g-m)
+    left: 20%
 
 // -------------------------------------
 //   States

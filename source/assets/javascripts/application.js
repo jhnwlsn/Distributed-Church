@@ -126,13 +126,24 @@ for (var i = 0; i < drapes.length; i++) {
   draw("drapes", white);
 }
 
-var verticals = document.getElementsByClassName("polygons--vertical");
-for (var i = 0; i < verticals.length; i++) {
-  var canvas = verticals[i];
+var story = document.getElementsByClassName("polygons--stories");
+for (var i = 0; i < story.length; i++) {
+  var canvas = story[i];
   var context = canvas.getContext('2d');
 
   canvas.height = 760;
   canvas.width = 125;
 
   draw("vertical", teal);
+}
+
+var guide = document.getElementsByClassName("polygons--guides");
+for (var i = 0; i < guide.length; i++) {
+  var canvas = guide[i];
+  var context = canvas.getContext('2d');
+
+  canvas.height = 760;
+  canvas.width = 125;
+
+  draw("vertical", yellow);
 }
