@@ -126,9 +126,9 @@ for (var i = 0; i < drapes.length; i++) {
   draw("drapes", white);
 }
 
-var story = document.getElementsByClassName("polygons--stories");
-for (var i = 0; i < story.length; i++) {
-  var canvas = story[i];
+var blog = document.getElementsByClassName("polygons--blog");
+for (var i = 0; i < blog.length; i++) {
+  var canvas = blog[i];
   var context = canvas.getContext('2d');
 
   canvas.height = 760;

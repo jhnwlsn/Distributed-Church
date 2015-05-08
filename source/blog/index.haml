@@ -1,2 +1,12 @@
+.row.row--a
+  .cell
+    = partial "shared/navigation"
+  .cell.well
+    .g
+      .g-b.g-b--m--1of2
+        %h1 Blog
+      .g-b.g-b--m--1of2
+        %p.mbf.mts= lorem.sentences 4
+
 - blog.articles.each do |article|
   = link_to article.title, article

@@ -16,6 +16,13 @@
 //   Modifiers
 // -------------------------------------
 
+.card.card--blog
+  a
+    color: $c-blog
+    &:hover,
+    &:focus
+      color: lighten($c-blog, 5%)
+
 .card.card--full
   .card-content
     +respond-to($g-m)
@@ -30,13 +37,6 @@
     &:hover,
     &:focus
       color: lighten($c-guide, 5%)
-
-.card.card--stories
-  a
-    color: $c-stories
-    &:hover,
-    &:focus
-      color: lighten($c-stories, 5%)
 
 // -------------------------------------
 //   Scaffolding
