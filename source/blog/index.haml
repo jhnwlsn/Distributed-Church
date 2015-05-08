@@ -8,5 +8,32 @@
       .g-b.g-b--m--1of2
         %p.mbf.mts= lorem.sentences 4
 
-- blog.articles.each do |article|
-  = link_to article.title, article
+.hero.hero--blog
+  %canvas.polygons.polygons--drapes
+  .cell
+    .hero-content
+      %h4 Featured Something
+      %h2= link_to 'Featured Thing Here', '#'
+      %p
+        Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
+  %canvas.polygons.polygons--mountains
+
+.row
+  .cell.well
+    .g
+      .g-b.g-b--m--2of3
+        %ul
+          - blog.articles.each do |article|
+            %li.summary
+              %h2= link_to article.title, article
+              %p= article.data.description
+      .g-b.g-b--m--1of3
+        .card.pam
+          %h3 Categories
+          %ul
+            %li= link_to "Aenean Dapibus", "#"
+            %li= link_to "Cursus Mattis", "#"
+            %li= link_to "Mollis Tristique", "#"
+            %li= link_to "Nibh Pellentesque", "#"
+            %li= link_to "Fusce Quam", "#"
+            %li= link_to "Tortor Lorem", "#"
