@@ -31,7 +31,13 @@
 //   States
 // -------------------------------------
 
-// .structure.is-state
+.navigation.is-active
+  .navigation-links
+    display: block
+  .navigation-overlay
+    display: block
+    +respond-to($g-m)
+      display: none
 
 // -------------------------------------
 //   Context
@@ -44,22 +50,54 @@
 // -------------------------------------
 
 .navigation-links
-  position: absolute
+  animation: fadeInUp 300ms ease-out
+  display: none
+  left: 0
+  margin: auto
+  max-width: 15em
+  position: fixed
   right: 0
+  text-align: center
   top: 50%
   transform: translateY(-50%)
+  z-index: 15
+  +respond-to($g-m)
+    animation: none
+    bottom: auto
+    display: block
+    left: auto
+    max-width: 100%
+    position: absolute
+    right: 0
+  a
+    display: block
+    +respond-to($g-m)
+      display: inline-block
   a:not(.btn)
     color: $c-gray-4
     font-family: $b-fontFamily-heading
+    font-size: 150%
     font-style: normal
     letter-spacing: 0.125rem
-    margin: 0 ($b-space * 0.75)
+    margin-bottom: $b-space
     text-transform: uppercase
+    +respond-to($g-m)
+      font-size: 100%
+      margin: 0 ($b-space * 0.75)
     &:hover,
     &:focus
       color: $c-next
+    &:last-child
+      border-top: 2px solid $c-gray-2
+      color: lighten($c-gray-3, 10%)
+      font-size: 100%
+      margin-top: $b-space * 1.25
+      padding-top: $b-space
+      +respond-to($g-m)
+        display: none
   a.btn
-    margin-left: $b-space
+    +respond-to($g-m)
+      margin-left: $b-space
 
 .navigation-logo
   background: transparent url(image_path("logo-gray.svg")) no-repeat
@@ -75,3 +113,39 @@
   &:hover,
   &:focus
     opacity: 0.8
+
+#navigation-mobile
+  display: block
+  font-size: 3em
+  font-style: normal
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  +respond-to($g-m)
+    display: none
+
+.navigation-overlay
+  animation: fadeIn 150ms
+  background: $c-gray-1
+  bottom: 0
+  display: none
+  left: 0
+  opacity: 1
+  position: fixed
+  right: 0
+  top: 0
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translateY(-35%)
+  to
+    opacity: 1
+    transform: translateY(-50%)

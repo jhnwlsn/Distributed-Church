@@ -1,4 +1,31 @@
 // --------------------------------------
+//  Mobile Menu
+// --------------------------------------
+
+// ----- Function ----- //
+
+function mobileMenu(event) {
+  var close = document.getElementById('navigation-close');
+  var target = event.target;
+  var toggle = document.getElementById('navigation-mobile');
+  var nav = document.getElementsByClassName('navigation')[0];
+
+  if (target == toggle) {
+    nav.classList.add('is-active');
+    event.preventDefault();
+  } else if (target == close) {
+    nav.classList.remove('is-active')
+    event.preventDefault();
+  }
+};
+
+// ----- Implementation ----- //
+
+window.onclick = function(event) {
+  mobileMenu(event);
+}
+
+// --------------------------------------
 //  Base Functions
 // --------------------------------------
 
