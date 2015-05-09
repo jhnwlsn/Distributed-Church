@@ -19,8 +19,8 @@
 .navigation
   .index &
     border-bottom: none
-    .navigation-links
-      a
+    .navigation-links a
+      +respond-to($g-m)
         color: $c-gray-1
     .navigation-logo
       background-image: url(image_path("logo-white.svg"))
@@ -50,7 +50,7 @@
 // -------------------------------------
 
 .navigation-links
-  animation: fadeInUp 300ms ease-out
+  animation: fadeInUp 450ms $b-transition
   display: none
   left: 0
   margin: auto
@@ -126,7 +126,7 @@
     display: none
 
 .navigation-overlay
-  animation: fadeIn 150ms
+  animation: fadeIn 300ms $b-transition
   background: $c-gray-1
   bottom: 0
   display: none
