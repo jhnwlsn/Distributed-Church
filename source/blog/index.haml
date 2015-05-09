@@ -22,7 +22,7 @@
   .cell.well
     .g
       .g-b.g-b--m--2of3
-        %ul
+        %ul.has-summaries
           - blog.articles.each do |article|
             %li.summary
               %h2= link_to article.title, article
