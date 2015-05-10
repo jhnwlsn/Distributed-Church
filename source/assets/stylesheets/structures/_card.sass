@@ -23,6 +23,21 @@
     &:focus
       color: lighten($c-blog, 5%)
 
+.card.card--categories
+  height: auto
+  padding: $b-space * 2
+  a
+    color: $c-blog
+    &:hover,
+    &:focus
+      color: lighten($c-blog, 5%)
+  h3
+    color: $c-gray-4
+    margin-bottom: $b-space * 1.5
+  ul
+    list-style: none
+    padding-left: 0
+
 .card.card--full
   .card-content
     +respond-to($g-m)
