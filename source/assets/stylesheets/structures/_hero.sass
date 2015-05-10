@@ -65,17 +65,23 @@
   position: absolute
   top: 50%
   transform: translateY(-50%)
-  width: 32rem
+  width: 100%
   z-index: 2
+  +respond-to($g-s)
+    width: 32rem
   h1
-    font-size: 400%
+    font-size: 250%
     line-height: 1.4
     margin-bottom: $b-space * 1.5
+    +respond-to($g-s)
+      font-size: 325%
+    +respond-to($g-m)
+      font-size: 400%
     span
       color: $c-next
       border-bottom: 2px solid $c-next
       padding-bottom: $b-space * 0.15
-      &:nth-child(n+3)
+      &:nth-child(n+4)
         color: $c-white
         border-color: $c-white
   h2, h3
