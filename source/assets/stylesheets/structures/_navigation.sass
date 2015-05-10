@@ -7,10 +7,14 @@
 
 .navigation
   border-bottom: 2px solid $c-gray-2
-  height: 10rem
+  height: 6rem
   margin-bottom: $b-space * 2.5
   position: relative
   z-index: 10
+  +respond-to($g-s)
+    height: 8rem
+  +respond-to($g-m)
+    height: 10rem
 
 // -------------------------------------
 //   Modifiers
@@ -50,7 +54,7 @@
 // -------------------------------------
 
 .navigation-links
-  animation: fadeInUp 450ms $b-transition
+  animation: fadeIn 500ms $b-transition
   display: none
   left: 0
   margin: auto
@@ -104,29 +108,35 @@
   background-position: center center
   background-size: 100%
   display: block
-  height: 2.75rem
+  height: 2.75rem * 0.75
   left: 0
   position: absolute
   top: 50%
   transform: translateY(-50%)
-  width: 20rem
+  width: 20rem * 0.75
+  +respond-to($g-s)
+    height: 2.75rem
+    width: 20rem
   &:hover,
   &:focus
     opacity: 0.8
 
 #navigation-mobile
+  color: $c-gray-4
   display: block
-  font-size: 3em
+  font-size: 2em
   font-style: normal
   position: absolute
   right: 0
   top: 50%
   transform: translateY(-50%)
+  .index &
+    color: $c-gray-1
   +respond-to($g-m)
     display: none
 
 .navigation-overlay
-  animation: fadeIn 300ms $b-transition
+  animation: fadeIn 500ms $b-transition
   background: rgba($c-gray-1, 0.98)
   bottom: 0
   display: none
