@@ -6,14 +6,19 @@
 // *************************************
 
 .hero
-  background: $c-black
-  margin-bottom: $b-space
+  background: transparent
   padding: 0 ($g-gutter * 0.5)
   position: relative
   +respond-to($g-s)
     padding: 0 ($g-gutter * 2)
   +respond-to($g-m)
     padding: 0 $g-gutter
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.hero--blog
   &::after
     background-image: url(image_path("placeholder.jpg"))
     background-position: center
@@ -26,12 +31,6 @@
     right: 0
     top: 0
     z-index: 0
-
-// -------------------------------------
-//   Modifiers
-// -------------------------------------
-
-.hero--blog
   a
     color: $c-blog
   .cell

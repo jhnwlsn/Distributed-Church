@@ -25,7 +25,7 @@
             = link_to "Read this Guide", guide.url
   %canvas.polygons.polygons--mountains
 
-.row
+.row.row--b.pts
   .cell.well
     .g
       - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|

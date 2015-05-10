@@ -174,3 +174,16 @@ for (var i = 0; i < guide.length; i++) {
 
   draw("vertical", yellow);
 }
+
+// --------------------------------------
+//  Background Video
+//  -> References vendor.js
+// --------------------------------------
+var homepage = document.getElementsByClassName("index")[0];
+vidbg(homepage, [
+  {
+    src: 'assets/videos/placeholder.mp4',
+    type: 'mp4'
+  }
+], true);
+console.log(homepage);

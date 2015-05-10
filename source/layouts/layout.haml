@@ -7,8 +7,8 @@
     %title= current_page.data.title || 'The Distributed Church'
     = stylesheet_link_tag '//cloud.typography.com/6627932/648746/css/fonts.css'
     = stylesheet_link_tag 'application'
+    = javascript_include_tag  'vendor'
   %body{ class: page_classes }
     = yield
     = partial "shared/footer"
-    = javascript_include_tag  'smoothscroll'
     = javascript_include_tag  'application'
