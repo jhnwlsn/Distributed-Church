@@ -1,3 +1,6 @@
 = wrap_layout :layout do
-  %h1= current_article.title
-  = yield
+  .row.row--a
+    .cell
+      = partial "shared/navigation"
+    .cell.well.well--l
+      = yield
