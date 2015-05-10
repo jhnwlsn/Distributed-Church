@@ -9,10 +9,12 @@
   background: $c-black
   overflow: hidden
   padding: 0 ($g-gutter * 0.5)
+  text-align: center
   +respond-to($g-s)
     padding: 0 ($g-gutter * 2)
   +respond-to($g-m)
     padding: 0 $g-gutter
+    text-align: left
 
 // -------------------------------------
 //   Modifiers
@@ -37,38 +39,61 @@
 // -------------------------------------
 
 .footer-contact
-  float: right
-  margin-bottom: $b-space * 3
+  display: inline
+  font-size: 80%
+  +respond-to($g-m)
+    display: block
+    float: right
+    font-size: 100%
+    margin-bottom: $b-space * 3
 
 .footer-copyright
-  float: left
-  margin-bottom: $b-space * 3
+  display: inline
+  font-size: 80%
+  +respond-to($g-m)
+    display: block
+    float: left
+    font-size: 100%
+    margin-bottom: $b-space * 3
 
 .footer-links
-  float: right
-  margin-bottom: $b-space * 2
+  +respond-to($g-m)
+    float: right
+    margin-bottom: $b-space * 2
+  a
+    display: block
+    +respond-to($g-m)
+      display: inline-block
   a:not(.btn)
     color: $c-white
     font-family: $b-fontFamily-heading
     font-style: normal
     letter-spacing: 0.125rem
-    margin: 0 ($b-space * 0.75)
+    margin: 0 0 ($b-space * 0.75)
     text-transform: uppercase
+    +respond-to($g-m)
+      margin: 0 ($b-space * 0.75)
+      width: auto
     &:hover,
     &:focus
       color: $c-next
   a.btn
-    margin-left: $b-space
+    margin: $b-space auto
+    max-width: 18rem
+    +respond-to($g-m)
+      margin: 0 0 0 $b-space
 
 .footer-logo
   background: transparent url(image_path("logo-white.svg")) no-repeat
   background-position: center center
   background-size: 100%
-  display: block
+  display: none
   float: left
   height: 2.75rem
-  margin-bottom: $b-space * 2
+  margin-bottom: ($b-space * 2)
   width: 20rem
+  +respond-to($g-m)
+    display: block
   &:hover,
   &:focus
     opacity: 0.8

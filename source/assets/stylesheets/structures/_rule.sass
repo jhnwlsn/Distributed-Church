@@ -17,7 +17,9 @@
 
 .rule.rule--footer
   border-color: lighten($c-black, 10%)
-  margin-bottom: $b-space * 2.5
+  margin: ($b-space * 1.5) 0
+  +respond-to($g-m)
+    margin: 0 0 ($b-space * 2.5)
 
 .rule.rule--inverted
   border-color: rgba($c-white, 0.25)
