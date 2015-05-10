@@ -48,11 +48,14 @@
 
 .hero--home
   .cell
-    height: 75vh
-    min-height: 40rem
+    height: 35rem
     +respond-to($g-s)
       height: 100vh
       min-height: 50rem
+  .hero-content
+    transform: translateY(-45%)
+    +respond-to($g-s)
+      transform: translateY(-50%)
 
 // -------------------------------------
 //   Scaffolding
