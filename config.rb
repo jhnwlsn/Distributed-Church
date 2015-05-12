@@ -18,6 +18,11 @@ set :relative_links, true
 
 activate :automatic_image_sizes
 
+# ----- Helpers ----- #
+
+require "lib/custom_helpers"
+helpers CustomHelpers
+
 # --------------------------------------
 #   Content
 # --------------------------------------
@@ -39,17 +44,6 @@ activate :directory_indexes
 
 set :markdown_engine, :redcarpet
 set :markdown, with_toc_data: true
-
-# Table of Contents Helper
-
-helpers do
-  def table_of_contents(resource)
-    content = File.read(resource.source_file)
-    toc_renderer = Redcarpet::Render::HTML_TOC.new(nesting_level: 1)
-    markdown = Redcarpet::Markdown.new(toc_renderer)
-    markdown.render(content)
-  end
-end
 
 # --------------------------------------
 #   Production
