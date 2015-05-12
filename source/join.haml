@@ -1,5 +1,24 @@
 .row.row--a
   .cell
     = partial "shared/navigation"
-  .cell.well
-    %h1 Join the Movement
+  .cell.well.mbf
+    .g
+      .g-b.g-b--m--1of2
+        %h2 Join the Movement
+      .g-b.g-b--m--1of2
+        %p.mbf.mts= lorem.sentences 4
+
+.row.row--b
+  %canvas.polygons.polygons--drapes
+  .cell.well.well--l.ptxl
+    .card.card--step
+      .card-image
+        = image_tag("http://www.placecage.com/200/200")
+      .card-content
+        %h2 Step 1: Do This
+        %p.fsl
+          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo.
+      .card-example
+        %h4 Practical Application
+        %p
+          Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo.
