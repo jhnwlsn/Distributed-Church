@@ -9,14 +9,14 @@
   background: $c-white
   margin-bottom: ($b-space * 2)
   position: relative
-  +respond-to($g-s)
-    height: 27rem
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
 .card.card--blog
+  +respond-to($g-s)
+    height: 27rem
   a
     color: $c-blog
     &:hover,
@@ -41,6 +41,8 @@
     padding-left: 0
 
 .card.card--full
+  +respond-to($g-s)
+    height: 27rem
   .card-content
     +respond-to($g-m)
       left: 60%
@@ -49,6 +51,8 @@
       width: 50%
 
 .card.card--guides
+  +respond-to($g-s)
+    height: 27rem
   a
     color: $c-guide
     &:hover,
