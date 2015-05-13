@@ -125,6 +125,7 @@ function randomNumber(min, max) {
 //  Implementation
 // --------------------------------------
 
+var blue = {r: 56, g: 76, b: 148}
 var gray = {r: 240, g: 241, b: 242};
 var red = {r: 229, g: 65, b: 59};
 var teal = {r: 118, g: 195, b: 176};
