@@ -60,16 +60,16 @@
       color: lighten($c-guide, 5%)
 
 .card.card--step
-  .card-image
-    background: none
-    border-radius: 50%
-    display: inline-block
-    height: auto
-    overflow: hidden
+  padding: $b-space * 3
+  .card-content
+    left: auto
     position: relative
-    width: auto
-    img
-      display: block
+    right: 0
+    transform: translateY(0)
+    +respond-to($g-m)
+      float: left
+      padding-right: $b-space * 2
+      width: 65%
 
 // -------------------------------------
 //   Scaffolding

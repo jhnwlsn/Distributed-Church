@@ -13,7 +13,7 @@
   - sitemap.resources.select{|g| g.data.type == "guide"}.each_with_index do |guide, index|
     - if index == 0
       .cell.cell--s
-        .bucket.bucket--flag
+        .bucket.bucket--guide
           .bucket-media
             = link_to guide.url do
               = image_tag("http://static.mailchimp.com/web/guides/how-to-avoid-spam-filters/images/cover.jpg")
