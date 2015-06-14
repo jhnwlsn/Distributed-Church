@@ -14,22 +14,25 @@
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   right: 0;
   width: auto;
   z-index: -101;
 }
 
 .vidbg video {
-  bottom: 0;
-  display: block;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  right: 0;
-  width: auto;
-  z-index: -100;
+  display: none;
+  @include respond-to($g-s) {
+    bottom: 0;
+    display: block;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -100;
+  }
 }
 
 /* optional overlay on top of the video */
@@ -40,7 +43,7 @@
   height: auto;
   min-width: 100%;
   min-height: 100%;
-  position: fixed;
+  position: absolute;
   right: 0;
   width: auto;
   z-index: -99;
