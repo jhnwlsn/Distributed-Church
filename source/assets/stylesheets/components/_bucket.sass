@@ -20,14 +20,51 @@
 
 .bucket.bucket--guide
   position: absolute
+  text-align: center
   top: 50%
   transform: translateY(-50%)
+  +respond-to($g-s)
+    text-align: left
   .bucket-content
     color: $c-white
+  .bucket-media
+    margin-bottom: $b-space * 2
+    +respond-to($g-s)
+      margin-bottom: 0
+  img
+    +respond-to($g-s)
+      width: 175px
+    +respond-to($g-m)
+      width: 300px
 
 .bucket.bucket--step
+  .bucket-content
+    display: block
+    width: 100%
+    +respond-to($g-m)
+      display: table-cell
+      vertical-align: middle
+      width: 10000px
+  .bucket-media
+    float: none
+    margin-bottom: $b-space * 1.5
+    +respond-to($g-s)
+      margin-right: 0
+    +respond-to($g-m)
+      float: left
+      margin-bottom: 0
+      margin-right: $g-gutter
   img
     border-radius: 50%
+    height: 125px
+    margin: 0
+    width: 125px
+    +respond-to($g-s)
+      height: 175px
+      width: 175px
+    +respond-to($g-m)
+      height: 200px
+      width: 200px
 
 // -------------------------------------
 //   Scaffolding
@@ -36,17 +73,23 @@
 // ----- Content ----- //
 
 .bucket-content
-  display: table-cell
-  vertical-align: middle
-  width: 10000px
+  +respond-to($g-s)
+    display: table-cell
+    vertical-align: middle
+    width: 10000px
   a
     color: $c-white !important
 
 // ----- Media ----- //
 
 .bucket-media
-  float: left
-  margin-right: $g-gutter
+  +respond-to($g-s)
+    float: left
+    margin-right: $g-gutter
   img
     display: block
-    max-width: 300px
+    margin: 0 auto
+    max-width: 215px
+    width: 100%
+    +respond-to($g-s)
+      max-width: 300px

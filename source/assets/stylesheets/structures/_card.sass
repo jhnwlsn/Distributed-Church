@@ -25,7 +25,9 @@
 
 .card.card--categories
   height: auto
-  padding: $b-space * 2
+  padding: $b-space * 1.25
+  +respond-to($g-s)
+    padding: $b-space * 2
   a
     color: $c-blog
     &:hover,
@@ -60,14 +62,25 @@
       color: lighten($c-guide, 5%)
 
 .card.card--step
-  padding: $b-space * 3
+  padding: $b-space * 1.5
+  +respond-to($g-s)
+    padding: $b-space * 2.25
+  +respond-to($g-m)
+    padding: $b-space * 3
   .card-content
     left: auto
+    font-size: 75%
+    margin-bottom: $b-space * 1.5
+    padding: 0
     position: relative
     right: 0
     transform: translateY(0)
+    +respond-to($g-s)
+      font-size: 85%
     +respond-to($g-m)
       float: left
+      font-size: 100%
+      margin-bottom: 0
       padding-right: $b-space * 2
       width: 65%
 

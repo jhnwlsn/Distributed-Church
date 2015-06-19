@@ -45,6 +45,11 @@
     display: none
   .cell
     height: 50vw
+    min-height: 50rem
+    +respond-to($g-s)
+      min-height: 30rem
+    +respond-to($g-m)
+      min-height: 35rem
 
 .hero--home
   .cell
